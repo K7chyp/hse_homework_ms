@@ -89,7 +89,7 @@ def redirect_to_full(short_id: str, db: Session = Depends(get_db)):
 
 @app.get("/")
 def get_stats():
-    return "Short url app сделанный Вороновым Никитой"
+    return {"info":"Short url app сделанный Вороновым Никитой"}
 
 
 @app.get("/stats/{short_id}")
