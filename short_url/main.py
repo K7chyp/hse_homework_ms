@@ -40,7 +40,9 @@ def shorten_url(item: URLCreate, db: Session = Depends(get_db)):
         short_id = generate_short_id()
         existing = db.query(URLItem).filter(URLItem.short_id == short_id).first()
         if not existing:
-            new_item = URLItem(short_id=short_id, full_url=str(item.url), created_at=datetime.now())
+            new_item = URLItem(
+                short_id=short_id, full_url=str(item.url), created_at=datetime.now()
+            )
             db.add(new_item)
             db.commit()
             db.refresh(new_item)
@@ -64,9 +66,11 @@ def list_all_urls(db: Session = Depends(get_db)):
         for url in urls
     ]
 
+
 def health_check():
     """Проверяет состояние сервиса."""
     return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}
+
 
 @app.get("/{short_id}")
 def redirect_to_full(short_id: str, db: Session = Depends(get_db)):
@@ -86,6 +90,7 @@ def redirect_to_full(short_id: str, db: Session = Depends(get_db)):
 @app.get("/")
 def get_stats():
     return "Short url app сделанный Вороновым Никитой"
+
 
 @app.get("/stats/{short_id}")
 def get_stats(short_id: str, db: Session = Depends(get_db)):
@@ -120,6 +125,7 @@ def update_url(short_id: str, updated_url: URLCreate, db: Session = Depends(get_
         "short_id": url_item.short_id,
         "full_url": url_item.full_url,
     }
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=80, reload=True)
