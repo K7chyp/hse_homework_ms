@@ -1,0 +1,58 @@
+version: '3.9'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: app_container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data  # Монтируем папку data
+      - ./main.py:/app/main.py  # Монтируем файл main.py
+      - ./:/app  # Подключаем всю локальную папку с кодом внутрь контейнера
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: always
+    depends_on:
+      - db
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    networks:
+      - app_network
+
+  db:
+    image: postgres:13 # Используем образ PostgreSQL
+    container_name: db_container
+    environment:
+      POSTGRES_USER: user  # Имя пользователя базы данных
+      POSTGRES_PASSWORD: password  # Пароль для базы данных
+      POSTGRES_DB: app_db  # Имя базы данных
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data  # Храним данные базы в томе
+    restart: always
+    networks:
+      - app_network
+
+  grafana:
+    image: grafana/grafana:latest  # Используем образ Grafana
+    container_name: grafana_container
+    ports:
+      - "3000:3000"  # Пробрасываем порт 3000 хоста в порт 3000 контейнера
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin  # Логин администратора
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Пароль администратора
+    volumes:
+      - grafana_data:/var/lib/grafana  # Храним данные Grafana в томе
+    restart: always
+    networks:
+      - app_network
+
+volumes:
+  db_data:
+  grafana_data:
+
+networks:
+  app_network:
