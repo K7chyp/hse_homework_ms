@@ -7,7 +7,7 @@
 
 ## Интересные факты
 1. Переделал SQLlite на PostgreSQL 
-2. Написал тесты short_url/tests.py 
+2. Написал тесты todo_app/tests.py 
 3. Поднял графану для мониторинга
 4. Завернул все это в контейнер и настроил volume c network
 5. DockerHub [https://hub.docker.com/r/nikitavoronovvvv/short_url/tags](https://hub.docker.com/repository/docker/nikitavoronovvvv/todo_app/tags
