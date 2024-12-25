@@ -20,6 +20,8 @@
 
 <img width="1815" alt="image" src="https://github.com/user-attachments/assets/eeb32557-086b-4ecf-863a-8fe7199e5598" />
 
+<img width="1473" alt="image" src="https://github.com/user-attachments/assets/2aedfd22-df9a-4b2e-ada0-c4c30d6a6c24" />
+
 
 ## Возможности
 
