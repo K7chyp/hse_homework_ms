@@ -17,6 +17,10 @@
 ## Картинки 
 <img width="717" alt="image" src="https://github.com/user-attachments/assets/882f5f48-a109-4f8e-9313-73979a474320" />
 
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/879c825c-68b4-4e5a-8a99-4dab07b11a50" />
+
+<img width="1815" alt="image" src="https://github.com/user-attachments/assets/eeb32557-086b-4ecf-863a-8fe7199e5598" />
+
 ---
 ## Основные возможности
 
