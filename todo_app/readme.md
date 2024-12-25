@@ -3,8 +3,16 @@
 ## Описание
 Этот проект предоставляет RESTful API для управления списком задач (Todo). Используя FastAPI, SQLAlchemy и Pydantic, приложение позволяет пользователям создавать, читать, обновлять и удалять задачи. Также реализованы дополнительные функции, такие как фильтрация по дате, поиск задач и управление статусом выполнения.
 
+---
 
-https://hub.docker.com/repository/docker/nikitavoronovvvv/todo_app/tags
+## Интересные факты
+1. Переделал SQLlite на PostgreSQL 
+2. Написал тесты short_url/tests.py 
+3. Поднял графану для мониторинга
+4. Завернул все это в контейнер и настроил volume c network
+5. DockerHub [https://hub.docker.com/r/nikitavoronovvvv/short_url/tags](https://hub.docker.com/repository/docker/nikitavoronovvvv/todo_app/tags
+)
+---
 
 ## Основные возможности
 
