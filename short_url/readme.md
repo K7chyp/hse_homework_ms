@@ -15,7 +15,8 @@
 ## Картинки 
 <img width="624" alt="image" src="https://github.com/user-attachments/assets/44d36d13-586a-4c8d-93ed-9fc11e691a1c" />
 
-<img width="943" alt="image" src="https://github.com/user-attachments/assets/879c825c-68b4-4e5a-8a99-4dab07b11a50" />
+
+<img width="885" alt="image" src="https://github.com/user-attachments/assets/06463a0e-5867-4f69-9661-f99385c9208d" />
 
 <img width="1815" alt="image" src="https://github.com/user-attachments/assets/eeb32557-086b-4ecf-863a-8fe7199e5598" />
 
