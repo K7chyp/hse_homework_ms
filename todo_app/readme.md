@@ -14,6 +14,10 @@
 )
 ---
 
+## Картинки 
+<img width="717" alt="image" src="https://github.com/user-attachments/assets/882f5f48-a109-4f8e-9313-73979a474320" />
+
+---
 ## Основные возможности
 
 1. **Получение всех задач:**
