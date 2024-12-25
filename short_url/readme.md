@@ -9,6 +9,7 @@
 2. Написал тесты short_url/tests.py 
 3. Поднял графану для мониторинга
 4. Завернул все это в контейнер и настроил volume c network
+5. DockerHub https://hub.docker.com/r/nikitavoronovvvv/short_url/tags
 ---
 
 ## Возможности
