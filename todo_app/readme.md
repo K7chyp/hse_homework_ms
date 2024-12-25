@@ -21,6 +21,8 @@
 
 <img width="1815" alt="image" src="https://github.com/user-attachments/assets/eeb32557-086b-4ecf-863a-8fe7199e5598" />
 
+<img width="1343" alt="image" src="https://github.com/user-attachments/assets/7562a971-8c15-465c-9ce9-41e9996ecbfa" />
+
 ---
 ## Основные возможности
 
